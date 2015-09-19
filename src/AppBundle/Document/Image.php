@@ -35,19 +35,19 @@ class Image
     /**
      * @Assert\NotBlank
      * @Assert\Regex("{^[a-z]+$}")
-     * @PHPCRODM\String()
+     * @PHPCRODM\Field(type="string")
      */
     public $name;
 
     /**
      * @Assert\NotBlank()
      * @var stream
-     * @PHPCRODM\Binary
+     * @PHPCRODM\Field(type="binary")
      */
     public $content;
 
     /**
-     * @PHPCRODM\String(multivalue=true)
+     * @PHPCRODM\Field(type="string", multivalue=true)
      */
     public $tags;
 
